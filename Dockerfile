@@ -29,8 +29,7 @@ RUN PERL_MM_USE_DEFAULT=1 perl -MCPAN -e 'install XML::Compile::Transport::SOAPH
 ADD http://meme-suite.org/meme-software/4.11.1/meme_4.11.1.tar.gz /opt/
 WORKDIR /opt/
 RUN tar zxvf meme_4.11.1.tar.gz && rm -fv meme_4.11.1.tar.gz
-WORKDIR /opt/software/meme_4.11.1
-RUN ./configure --prefix=/opt  --enable-build-libxml2 --enable-build-libxslt  --with-url=http://meme-suite.org
-RUN make
-RUN make test
-RUN make install
+RUN cd /opt/meme_4.11.1 && \
+	./configure --prefix=/opt  --enable-build-libxml2 --enable-build-libxslt  --with-url=http://meme-suite.org && \ 
+	make && \
+	make install
