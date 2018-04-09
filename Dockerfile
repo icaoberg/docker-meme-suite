@@ -34,3 +34,5 @@ RUN cd /opt/meme/meme_4.11.1 && \
 	./configure --prefix=/opt  --enable-build-libxml2 --enable-build-libxslt  --with-url=http://meme-suite.org && \ 
 	make && \
 	make install
+ENV PATH="/opt/bin:${PATH}"
+
