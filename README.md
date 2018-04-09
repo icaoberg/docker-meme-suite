@@ -19,4 +19,4 @@ sudo singularity build ubuntu17.10-meme_4.11.1.img Singularity
 
 ## Acknowledgement
 
-The Dockerfile in this repository is based on @forrestzhang [Dockerfile](https://github.com/forrestzhang/Docker/tree/master/meme).
+The Dockerfile in this repository is based on [forrestzhang](https://github.com/forrestzhang) [Dockerfile](https://github.com/forrestzhang/Docker/tree/master/meme).
