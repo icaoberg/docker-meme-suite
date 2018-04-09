@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: icaoberg/meme
+From: icaoberg/meme-suite
 
 IncludeCmd: yes
 
