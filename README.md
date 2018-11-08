@@ -9,6 +9,12 @@ docker build -t icaoberg/meme-suite .
 
 For convenience, the Docker image can be found in [Dockerhub](https://hub.docker.com/r/icaoberg/meme-suite/builds/).
 
+To run a container using the image above
+
+```
+docker run -i -t murphylab/cellorganizer
+```
+
 ## Singularity
 To create the Singularity container, run the command
 
