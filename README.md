@@ -12,7 +12,7 @@ For convenience, the Docker image can be found in [Dockerhub](https://hub.docker
 To run a container using the image above
 
 ```
-docker run -i -t murphylab/cellorganizer
+docker run -i -t icaoberg/meme-suite
 ```
 
 ## Singularity
