@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
     libexpat1-dev \
     zlib1g-dev \
     libxml2-dev \
+    autoconf automake libtool \
     libhtml-template-compiled-perl \
     libxml-opml-simplegen-perl \
     libxml-libxml-debugging-perl
