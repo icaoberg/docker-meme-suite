@@ -1,4 +1,4 @@
-FROM ubuntu:artful
+FROM ubuntu:18.04
 
 RUN apt-get update && apt-get install -y \
     libopenmpi-dev \
@@ -12,7 +12,9 @@ RUN apt-get update && apt-get install -y \
     autoconf automake libtool \
     libhtml-template-compiled-perl \
     libxml-opml-simplegen-perl \
-    libxml-libxml-debugging-perl
+    libxml-libxml-debugging-perl \
+    sudo \
+    openssh-server
 
 RUN PERL_MM_USE_DEFAULT=1 perl -MCPAN -e 'install Log::Log4perl'
 RUN PERL_MM_USE_DEFAULT=1 perl -MCPAN -e 'install Math::CDF'
@@ -36,4 +38,9 @@ RUN cd /opt/meme/meme-5.0.2 && \
 	make && \
 	make install
 ENV PATH="/opt/bin:${PATH}"
-
+RUN adduser --disabled-password --gecos '' docker
+RUN adduser docker sudo
+RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+USER docker
+CMD /bin/bash
+WORKDIR /home/docker
