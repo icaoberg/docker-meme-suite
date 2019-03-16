@@ -30,13 +30,14 @@ RUN PERL_MM_USE_DEFAULT=1 perl -MCPAN -e 'install XML::Compile::SOAP11'
 RUN PERL_MM_USE_DEFAULT=1 perl -MCPAN -e 'install XML::Compile::WSDL11'
 RUN PERL_MM_USE_DEFAULT=1 perl -MCPAN -e 'install XML::Compile::Transport::SOAPHTTP'
 RUN mkdir /opt/meme
-ADD http://meme-suite.org/meme-software/5.0.2/meme-5.0.2.tar.gz /opt/meme
+ADD http://meme-suite.org/meme-software/5.0.4/meme-5.0.4.tar.gz /opt/meme
 WORKDIR /opt/meme/
-RUN tar zxvf meme-5.0.2.tar.gz && rm -fv meme-5.0.2.tar.gz
-RUN cd /opt/meme/meme-5.0.2 && \
+RUN tar zxvf meme-5.0.4.tar.gz && rm -fv meme-5.0.4.tar.gz
+RUN cd /opt/meme/meme-5.0.4 && \
 	./configure --prefix=/opt  --enable-build-libxml2 --enable-build-libxslt  --with-url=http://meme-suite.org && \ 
 	make && \
-	make install
+	make install && \
+        rm -rfv /opt/meme
 ENV PATH="/opt/bin:${PATH}"
 RUN adduser --disabled-password --gecos '' docker
 RUN adduser docker sudo
