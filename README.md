@@ -23,9 +23,12 @@ docker pull icaoberg/meme-suite:latest
 
 ## Acknowledgement
 
-The Dockerfile in this repository is based on [forrestzhang](https://github.com/forrestzhang) [Dockerfile](https://github.com/forrestzhang/Docker/tree/master/meme).
+[![Wold you buy me some coffee?](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/icaoberg)
+
+The Dockerfile in this repository is based on [forrestzhang](https://github.com/forrestzhang) [Dockerfile](https://github.com/forrestzhang/Docker/tree/master/meme).## Disclaimer
 
 ---
 [![CBD](http://www.cbd.cmu.edu/wp-content/uploads/2017/07/wordpress-default.png)](http://www.cbd.cmu.edu)
 
 Copyleft © 2019 [icaoberg](http://www.andrew.cmu.edu/~icaoberg) at the [Computational Biology Department](http://www.cbd.cmu.edu) in [Carnegie Mellon University](http://www.cmu.edu)
+
